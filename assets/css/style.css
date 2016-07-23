@@ -1,8 +1,16 @@
+* {
+	margin: 0;
+}
+html {
+	height: 100%;
+	overflow: auto;
+}
 body {
-	background: url(../images/congruent_pentagon.png);
+	background: url(../images/plaid_@2X.png);
 	font-family: "Arial", "Helvetica Neue", Helvetica, sans-serif;
 	color: #777777;
-	margin-bottom: 100px;
+	height: 100%;
+	overflow: auto;
 }
 h1, h2 {
 	font-family: "Georgia", Times, "Times New Roman", serif;
@@ -30,6 +38,9 @@ nav > text {
 a:hover {
 	color: #aaaaaa;
 }
+a:active {
+	color: #333333;
+}
 header {
 	background-color: #ffffff;
 	width: 100%;
@@ -43,14 +54,19 @@ header {
 	margin-left: auto;
 	margin-right: auto;
 }
-#header-title {
+.wrapper {
+	min-height: 100%;
+	margin-bottom: -100px;
+	overflow: auto;
+}
+.header-title {
 	display: inline-block;
 	background-color: #4aaaa5;
 	color: #ffffff;
 	width: 270px;
 	height: 85px;
 }
-#header-title h1 {
+.header-title h1 {
 	text-align: center;
 	color: #ffffff;
 	padding-top: 25px;
@@ -61,14 +77,14 @@ nav {
 	padding-top: 34px;
 	padding-bottom: 34px;
 }
-#main-content {
+.main-content {
 	display: inline-block;
 	width: 650px;
 	background-color: #ffffff;
 	margin-bottom: 60px;
 }
 .inner-content {
-	padding: 24px;
+	margin: 24px;
 }
 .headings {
 	border-bottom: solid;
@@ -84,30 +100,39 @@ nav {
 #sidebar-heading {
 	border-width: 2px;
 }
-#sidebar {
+.sidebar {
 	float: right;
 	width: 270px;
 	align-content: center;
 	background-color: #ffffff;
 }
-#main-content, #sidebar {
+.main-content, .sidebar {
 	border: solid;
 	border-width: 2px;
 	border-color: #dddddd;
 }
-#sidebar > div > div > img {
+.sidebar > div > div > img {
 	display: inline-block;
-	margin: 3px;
+	
+	border: solid;
+	border-width: 3px;
+	border-color: #ffffff;
+	border-radius: 50px;
 }
-#profile-pic {
+.sidebar > div > div > img:hover {
+	border-color: #dddddd;
+}
+.sidebar > div > div > img:active {
+	transform: translate(2px, 2px);
+}
+.profile-pic {
 	float: right;
 	margin-left: 8px;
 	margin-bottom: 8px;
 }
 footer {
-	position: fixed;
+	clear: all;
 	width: 100%;
-	bottom: 0px;
 	background-color: #666666;
 	color: #aaaaaa;
 	height: 100px;
@@ -115,8 +140,20 @@ footer {
 	border-width: 6px;
 	border-color: #4aaaa5;
 }
-#footer-text {
+.footer-text {
 	text-align: center;
 	margin-top: 40px;
 	margin-bottom: 40px;
+}
+input, textarea {
+	width: 580px;
+	height: 2em;
+	margin-top: 8px;
+	margin-bottom: 12px;
+	padding: 3px 8px;
+}
+textarea {
+	height: 200px;
+	border-color: #dddddd;
+	overflow: auto;
 }
