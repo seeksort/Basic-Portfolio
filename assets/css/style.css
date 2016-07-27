@@ -71,8 +71,9 @@ nav {
 	padding-top: 34px;
 	padding-bottom: 34px;
 }
-nav > text {
+nav > p {
 	color: #bbbbbb;
+	display: inline-block;
 }
 header {
 	background-color: #ffffff;
